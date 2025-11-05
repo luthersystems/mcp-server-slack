@@ -1,5 +1,5 @@
 {
-  "name": "@zencoderai/slack-mcp-server",
+  "name": "mcp-server-slack",
   "version": "0.0.0-dev",
   "description": "MCP server for interacting with Slack",
   "license": "MIT",
@@ -7,18 +7,19 @@
   "homepage": "https://zencoder.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zencoderai/slack-mcp-server"
+    "url": "https://github.com/luthersystems/mcp-server-slack"
   },
-  "bugs": "https://github.com/zencoderai/slack-mcp-server/issues",
+  "bugs": "https://github.com/luthersystems/mcp-server-slack/issues",
   "type": "module",
   "bin": {
-    "slack-mcp": "dist/index.js"
+    "mcp-server-slack": "dist/index.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
     "watch": "tsc --watch",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
